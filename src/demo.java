@@ -12,5 +12,9 @@ public class demo {
         NegativeBinomial test3 = new NegativeBinomial(5,0.4);
         System.out.println(test3.pmf(10));
         test3.fullpmf();
+
+        Poisson test4 = new Poisson(5);
+        System.out.println(test4.pmf(3));
+        test4.fullpmf();
     }
 }

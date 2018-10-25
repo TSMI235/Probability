@@ -10,6 +10,7 @@ public class Binomial extends DiscreteRandomDist {
     }
 
     //P(x=k) = (n choose k) * (p**k) * ((1-p)**(n-k)
+    //TODO: Check range of K to see if it is a valid parameter and error if not
     public double pmf(int k) {
         return (choose(n,k)* Math.pow(p,k) * Math.pow(1-p,n-k));
     }

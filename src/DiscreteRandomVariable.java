@@ -25,7 +25,7 @@ abstract class DiscreteRandomDist {
     }
 
     //Simple recursive factorial method for private use in choose only
-    private int fact(int j) {
+    public int fact(int j) {
         return (j == 1 || j == 0) ? 1 : j * fact(j - 1);
     }
 

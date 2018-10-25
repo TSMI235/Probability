@@ -4,12 +4,13 @@ public class NegativeBinomial extends DiscreteRandomDist {
     private double p;
 
     public NegativeBinomial(int r, double p) {
-        super(new int[]{r,30});
+        super(new int[]{r,15});
         this.r = r;
         this.p = p;
     }
 
     //P(x=k) = (n choose k) * (p**k) * ((1-p)**(n-k)
+    //TODO: Check range of K to see if it is a valid parameter and error if not
     public double pmf(int k) {
         return (choose(k-1,r-1)* Math.pow(1-p,k-r) * Math.pow(p,r));
     }
